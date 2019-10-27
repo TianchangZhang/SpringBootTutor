@@ -21,8 +21,4 @@ public class MyService {
         return myRepository.findIndex(input);
     }
 
-    public List<Index> all(){
-
-        return myRepository.findAll();
-    }
 }

@@ -24,20 +24,11 @@ public class Controller {
     @Autowired // IOC 控
     CourseService courseService;
     MyService myService; // Singleton
-    @GetMapping(path = "/", produces = "application/json")
-    public HttpEntity<Course> findAllIndex(){
-        List<Index> allCourses = myService.all();
-        return new ResponseEntity(allCourses, HttpStatus.OK);
-    }
 
     @GetMapping(path = "/find/{inputString}", produces = "application/json")
     public HttpEntity<Index> searchCourse(@PathVariable("inputString") String inputString) {
 
         List<Index> findIndex = myService.searchIndex(inputString);
-//        Index one  = Index.builder()
-//                .num(1)
-//                .build();
-//        List<Index> findIndex = new ArrayList<>(List.of(one));
         return new ResponseEntity(findIndex, HttpStatus.OK);
     }
 }
