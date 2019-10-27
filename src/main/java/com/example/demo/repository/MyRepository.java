@@ -9,15 +9,16 @@ import java.util.List;
 
 @Repository
 public class MyRepository {
-    List<Integer> data = new ArrayList<>();
+    List<Integer> data = new ArrayList<>(List.of(1,2,3,4,5));
 
     // constructor
     public MyRepository() {
-        data.add(1);
-        data.add(2);
-        data.add(3);
-        data.add(4);
-        data.add(5);
+//        data.add(1);
+//        data.add(2);
+//        data.add(3);
+//        data.add(4);
+//        data.add(5);
+        data.add(6);
 
     }
 

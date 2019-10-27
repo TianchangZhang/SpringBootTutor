@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 // single function interface
@@ -22,7 +21,6 @@ import java.util.List;
 public class Controller {
 
     @Autowired // IOC 控
-    CourseService courseService;
     MyService myService; // Singleton
 
     @GetMapping(path = "/find/{inputString}", produces = "application/json")
